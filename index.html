@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Based Face Recognition Attendance</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            color: #3b3b3b;
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .video-container {
+            margin-top: 30px;
+            position: relative;
+            display: inline-block;
+            background-color: #000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .video-container video {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Button Styling */
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 50px;
+            padding: 15px;
+            background-color: #3b3b3b;
+            color: white;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Alert Box */
+        .alert {
+            background-color: #f44336;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI-Based Face Recognition Attendance System</h1>
+
+        <!-- Live Video Feed -->
+        <div class="video-container">
+            <h2>Live Webcam Feed</h2>
+            <img id="video_feed" src="{{ url_for('video_feed') }}" alt="Video Feed" />
+        </div>
+
+        <!-- Attendance Log -->
+        <div class="alert" id="alert-box">Attendance Recorded!</div>
+
+        <!-- Control Button -->
+        <a href="#" class="btn" id="startButton">Start Recognition</a>
+
+    </div>
+
+    <footer>
+        <p>© 2025 AI Attendance System | Developed by Anuradha</p>
+    </footer>
